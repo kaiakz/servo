@@ -6,6 +6,7 @@ use crate::dom::bindings::root::Dom;
 use crate::dom::customelementregistry::{
     CustomElementDefinition, CustomElementReaction, CustomElementState,
 };
+use crate::dom::elementinternals::ElementInternals;
 use crate::dom::mutationobserver::RegisteredObserver;
 use crate::dom::node::UniqueId;
 use crate::dom::shadowroot::ShadowRoot;
@@ -42,4 +43,6 @@ pub struct ElementRareData {
     pub custom_element_definition: Option<Rc<CustomElementDefinition>>,
     /// <https://dom.spec.whatwg.org/#concept-element-custom-element-state>
     pub custom_element_state: CustomElementState,
+    /// <https://html.spec.whatwg.org/multipage#elementinternals>,
+    pub element_internals: Option<Dom<ElementInternals>>,
 }
