@@ -92,6 +92,10 @@ pub(crate) struct CanvasContextState {
     shadow_offset_y: f64,
     shadow_blur: f64,
     shadow_color: RGBA,
+    font: DOMString,
+    // text_align: TextAlign,
+    // text_baseline: TextBaseLine,
+    // direction: CanvasDirection,
 }
 
 impl CanvasContextState {
